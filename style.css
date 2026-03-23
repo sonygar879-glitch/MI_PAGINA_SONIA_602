@@ -38,7 +38,7 @@ nav{
 
 /*Enlaces del menu*/
 nav a{
-    color: white;
+    color: rgb(255, 0, 221);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -58,7 +58,7 @@ nav a:hover {
 
 /*Secciones*/
 section {
-    background-color: white;
+    background-color: rgb(230, 1, 222);
     margin: 20px auto;
     padding: 20px;
     width: 80%;
@@ -78,7 +78,7 @@ margin-top: 10px;
 /*Pie de pagina*/
 footer {
     background-color: #2c3e50;
-    color: white;
+    color: rgb(251, 0, 255);
     text-align: center;
     padding: 10px;
     margin-top: 20px;

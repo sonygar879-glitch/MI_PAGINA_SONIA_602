@@ -4,6 +4,8 @@ h1 {
 }
 
 
+
+
 /*Estilo general de la paguina*/
 body {
 font-family: Arial, Helvetica, sans-serif;
@@ -21,12 +23,17 @@ header{
 }
 
 
+
+
 /*Menu de navegacion*/
 nav{
     background-color: #34445e;
     text-align: center;
     padding: 12px;
 }
+
+
+
 
 
 /*Enlacesb del menu*/
@@ -38,10 +45,16 @@ nav a{
 }
 
 
+
+
 /*Efecto al pasar el mouse*/
 nav a:hover {
     color: #f1c40f;
 }
+
+
+
+
 
 /*Secciones*/
 section {
@@ -58,6 +71,9 @@ img{
 border-radius: 10px;
 margin-top: 10px;
 }
+
+
+
 
 /*Pie de pagina*/
 footer {

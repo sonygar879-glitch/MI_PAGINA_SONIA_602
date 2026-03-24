@@ -1,342 +1,86 @@
-/* ========================================
-   PALETA ACADÉMICA / UNIVERSITARIA
-======================================== */
-:root {
-    /* Colores institucionales clásicos */
-    --navy-blue: #1e3a8a;           /* Azul marino académico */
-    --burgundy: #7c2d12;            /* Burdeos universitario */
-    --cream: #fdf4e5;               /* Crema pergamino */
-    --ivory: #fefce8;               /* Marfil papel antiguo */
-    --charcoal: #1f2937;            /* Carbón/gris oscuro */
-    --slate: #64748b;               /* Pizarra gris */
-    --light-gray: #f1f5f9;          /* Gris claro institucional */
-    
-    /* Acentos académicos */
-    --gold-emboss: #d97706;         /* Dorado sello académico */
-    --accent-blue: #3b82f6;         /* Azul académico claro */
-    
-    /* Estados */
-    --hover-navy: #1e40af;
-    --focus-ring: 0 0 0 3px rgba(30, 58, 138, 0.3);
-    
-    /* Tipografía académica */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2.5rem;
-    --spacing-xl: 4rem;
-    --border-radius: 8px;
-    --shadow-book: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.12);
-}
 
-/* ========================================
-   FUENTES ACADÉMICAS
-======================================== */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(180deg, var(--cream) 0%, var(--light-gray) 100%);
-    color: var(--charcoal);
-    line-height: 1.8;
-    min-height: 100vh;
-}
-
-/* ========================================
-   TIPOGRAFÍA ACADÉMICA
-======================================== */
 h1 {
-    font-family: 'Crimson Text', Georgia, serif;
-    color: var(--navy-blue);
-    font-size: clamp(2.25rem, 6vw, 3.75rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    color: rgb(255, 238, 0);
+
 }
 
-h2 {
-    font-family: 'Crimson Text', Georgia, serif;
-    color: var(--burgundy);
-    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-    position: relative;
+
+
+
+/*Estilo general de la paguina*/
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #ff4800d9;
+margin: 0;
+line-height: 1.6;
 }
 
-h3 {
-    font-family: 'Crimson Text', Georgia, serif;
-    color: var(--navy-blue);
-    font-size: 1.625rem;
-    font-weight: 600;
-    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
-}
-
-p {
-    font-size: 1.125rem;
-    color: #4b5563;
-    margin-bottom: var(--spacing-sm);
-    hyphens: auto;
-}
-
-strong {
-    color: var(--burgundy);
-    font-weight: 600;
-}
-
-/* ========================================
-   HEADER ACADEMICO
-======================================== */
-header {
-    background: linear-gradient(135deg, var(--navy-blue) 0%, #334155 100%);
-    color: #fefefe;
+/*Encabezado*/
+header{
+    background-color: #ad0f0f;
+    color: rgba(255, 119, 0, 0.838);
     text-align: center;
-    padding: var(--spacing-xl) var(--spacing-xl);
-    box-shadow: var(--shadow-card);
-    position: relative;
-    border-bottom: 4px solid var(--gold-emboss);
+    padding: 30px 20px;
 }
 
-header::before {
-    content: '📚';
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    font-size: 2rem;
-    opacity: 0.1;
+
+
+
+/*Menu de navegacion*/
+nav{
+    background-color: #d2c215f0;
+    text-align: center;
+    padding: 12px;
 }
 
-/* ========================================
-   NAVEGACIÓN INSTITUCIONAL
-======================================== */
-nav {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    box-shadow: var(--shadow-book);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(124, 45, 18, 0.1);
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
 
-nav a {
-    color: var(--slate);
+
+
+/*Enlaces del menu*/
+nav a{
+    color: rgb(232, 201, 0);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.05rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--border-radius);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-bottom: 2px solid transparent;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-nav a:hover,
-nav a:focus {
-    color: var(--navy-blue);
-    border-bottom-color: var(--navy-blue);
-    background: rgba(30, 58, 138, 0.05);
-    outline: none;
+
+
+
+/*Efecto al pasar el mouse*/
+nav a:hover {
+    color: #eeff00;
 }
 
-nav a:focus-visible {
-    box-shadow: var(--focus-ring);
+
+
+
+
+/*Secciones*/
+section {
+    background-color: rgb(242, 255, 0);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
 }
 
-/* ========================================
-   CONTENIDO ACADÉMICO
-======================================== */
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
+
+/*imagenes*/
+img{
+border-radius: 10px;
+margin-top: 10px;
 }
 
-.seccion {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    margin: var(--spacing-xl) auto;
-    padding: var(--spacing-xl);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-card);
-    border-left: 5px solid var(--burgundy);
-    transition: all 0.4s ease;
-    position: relative;
-}
 
-.seccion::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--navy-blue), var(--gold-emboss), var(--burgundy));
-}
 
-.seccion:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
-}
 
-.seccion h2 {
-    text-align: center;
-}
-
-.seccion h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: var(--burgundy);
-    margin: 1rem auto 0;
-    border-radius: 1px;
-}
-
-/* ========================================
-   ELEMENTOS VISUALES ACADÉMICOS
-======================================== */
-figure {
-    text-align: center;
-    margin: var(--spacing-xl) 0;
-    padding: var(--spacing-md);
-    background: var(--ivory);
-    border-radius: var(--border-radius);
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.03);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: calc(var(--border-radius) / 2);
-    box-shadow: var(--shadow-book);
-    transition: all 0.3s ease;
-    border: 3px solid rgba(255,255,255,0.8);
-}
-
-img:hover {
-    transform: scale(1.01);
-    box-shadow: var(--shadow-card);
-}
-
-figcaption {
-    color: var(--slate);
-    font-size: 0.95rem;
-    font-style: italic;
-    margin-top: var(--spacing-sm);
-    font-weight: 500;
-    letter-spacing: 0.025em;
-    padding-top: var(--spacing-xs);
-    border-top: 1px solid rgba(124, 45, 18, 0.1);
-}
-
-/* ========================================
-   FOOTER INSTITUCIONAL
-======================================== */
+/*Pie de pagina*/
 footer {
-    background: linear-gradient(135deg, var(--charcoal), var(--navy-blue));
-    color: #e2e8f0;
+    background-color: #e40808bd;
+    color: rgb(250, 158, 0);
     text-align: center;
-    padding: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-footer p {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--spacing-md);
-}
-
-/* ========================================
-   RESPONSIVE ACADÉMICO
-======================================== */
-@media (max-width: 768px) {
-    nav ul {
-        gap: 1.5rem;
-    }
-    
-    nav a {
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-    }
-    
-    .seccion {
-        margin: var(--spacing-lg) var(--spacing-sm);
-        padding: var(--spacing-lg);
-    }
-    
-    header {
-        padding: var(--spacing-lg) var(--spacing-md);
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-    
-    main {
-        padding: var(--spacing-md);
-    }
-    
-    h1 {
-        font-size: 2.25rem;
-    }
-    
-    figure {
-        padding: var(--spacing-sm);
-    }
-}
-
-/* ========================================
-   ANIMACIONES ACADÉMICAS
-======================================== */
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.seccion {
-    animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.seccion:nth-child(2) { animation-delay: 0.2s; }
-.seccion:nth-child(3) { animation-delay: 0.4s; }
-
-/* ========================================
-   IMPRESIÓN ACADÉMICA
-======================================== */
-@media print {
-    body { background: white; color: black; }
-    header, nav, footer { box-shadow: none; }
-    .seccion { box-shadow: none; border: 1px solid #ccc; }
-    nav { display: none; }
+    padding: 10px;
+    margin-top: 20px;
 }

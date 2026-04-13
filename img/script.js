@@ -1,6 +1,6 @@
 function MostrarMensaje(){
-    let mensaje=document.getElementtById(No dañes a los animales);
-    mensaje.innerHTML="no dañes a los animales";
+    let mensaje=document.getElementById(Cuida y protege a los animales);
+    mensaje.innerHTML="Cuida y protege a los animales";
     mensaje.style.display="block";
 
     setTimeout(()=>{

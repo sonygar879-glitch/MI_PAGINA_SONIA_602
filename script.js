@@ -1,7 +1,7 @@
 
     function MostrarMensaje(){
     let mensaje=document.getElementById("mensaje");
-    mensaje.innerHTML="soy de Rio Hilo";
+    mensaje.innerHTML="CUIDA Y PROTEGE A LOS ANIMALES";
     mensaje.style.display="block";
 
     setTimeout(()=>{

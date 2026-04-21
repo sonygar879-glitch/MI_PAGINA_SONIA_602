@@ -16,7 +16,7 @@
 function mostrarMensaje2 () {
     let mensaje= document.getElementById("mensaje2");
 
-    mensaje.innerHTML="soy sonia ";
+    mensaje.innerHTML="soy sonia del E-35";
     mensaje.style.display="block";
 
     setTimeout (() => {

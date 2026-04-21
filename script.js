@@ -10,3 +10,19 @@
     }, 50);
 }
 
+
+
+
+function mostrarMensaje2 () {
+    let mensaje= document.getElementById("mensaje2");
+
+    mensaje.innerHTML="soy sonia ";
+    mensaje.style.display="block";
+
+    setTimeout (() => {
+        mensaje.style.opacity = "2";
+        mensaje.style.transform = "translateY(0)";
+    }, 50);
+
+}
+

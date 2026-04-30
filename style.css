@@ -84,3 +84,82 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+
+
+
+/* === VARIABLES CSS PARA MODO OSCURO === */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --button-bg: #667eea;
+    --button-hover: #5a67d8;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+    --button-bg: #4a5568;
+    --button-hover: #2d3748;
+}
+
+/* === ESTILOS BASE DE LA PÁGINA === */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+}
+
+h1 { color: var(--text-color); }
+
+/* === BOTÓN MODO OSCURO === */
+.btn-modo-oscuro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-modo-oscuro:hover {
+    transform: scale(1.1);
+    background: var(--button-hover);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.btn-modo-oscuro.active {
+    background: #f39c12;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-modo-oscuro { width: 55px; height: 55px; font-size: 16px; }
+}

@@ -1,406 +1,372 @@
-
-/* ========================================
-   RESET Y GENERALES
-======================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    color: #0984ff; /* Azul marino oscuro elegante */
 }
 
+/*Estilo general de la página*/
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
+    font-family: 'Georgia', 'Times New Roman', serif; /* Fuente más académica */
+    background-color: #888e91d2; /* Gris muy claro, limpio */
+    margin: 0;
+    line-height: 1.8; /* Más espacio para lectura académica */
+    color: #34495e; /* Texto gris oscuro legible */
 }
 
-/* ========================================
-   HEADER
-======================================== */
+/*Encabezado*/
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%); /* Gradiente académico */
     color: white;
     text-align: center;
-    padding: 3rem 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"><defs><pattern id="grain" width="100" height="10" patternUnits="userSpaceOnUse"><circle cx="25" cy="5" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="5" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="10" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-}
-
-header h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 1;
-}
-
-/* ========================================
-   NAVEGACIÓN
-======================================== */
+/*Menu de navegacion*/
 nav {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    background-color: #2c3e50; /* Azul marino consistente */
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/*Enlaces del menu*/
 nav a {
-    display: inline-block;
-    color: #667eea;
+    color: #ecf0f1; /* Blanco cremoso */
     text-decoration: none;
-    padding: 12px 24px;
-    margin: 0 10px;
-    border-radius: 50px;
+    margin: 0 20px;
     font-weight: 600;
+    font-size: 1.1em;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
+/*Efecto al pasar el mouse*/
 nav a:hover {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: white;
+    color: #3498db; /* Azul académico vibrante */
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
 }
 
-/* ========================================
-   SECCIONES GENERALES
-======================================== */
+/*Secciones*/
 section {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 85%;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra suave */
+    border-left: 5px solid #3498db; /* Línea lateral distintiva */
 }
 
-section h2 {
-    font-size: 2.5rem;
+/*imagenes*/
+img {
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/*Pie de pagina*/
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #bdc3c7; /* Gris claro elegante */
     text-align: center;
-    margin-bottom: 2rem;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.95em;
 }
 
-section h3 {
-    font-size: 1.8rem;
-    color: #764ba2;
-    margin: 1.5rem 0 1rem;
-    text-align: center;
+/* Mejoras adicionales para ambiente académico */
+h2, h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
 }
 
-/* ========================================
-   BOTONES TOGGLE MENSAJE
-======================================== */
-.mensaje {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Botones académicos (opcional) */
+button {
+    background-color: #3498db;
     color: white;
-    padding: 20px 30px;
-    border-radius: 15px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    position: relative;
-    overflow: hidden;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 10px 5px;
 }
 
-.mensaje.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
-.mensaje::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    transition: left 0.6s;
-}
 
-.mensaje.visible::before {
-    left: 100%;
-}
-
-button[onclick*="mostrarMensaje"], 
-button[onclick*="MostrarMensaje"] {
-    background: linear-gradient(45deg, #4CAF50, #45a049);
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: aquamarine;
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
-    transition: all 0.3s ease;
-    display: block;
-    margin: 20px auto;
+    transition: transform 0.1s, background-color 0.3s;
 }
 
-button[onclick*="mostrarMensaje"]:hover,
-button[onclick*="MostrarMensaje"]:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+
+#mensaje {
+    display: none;
+    opacity: 0;
+transform: translateY(-10px);
+font-weight: bold;
+color: aquamarine;
+margin-top: 20px;
 }
 
-/* ========================================
-   SECCIÓN SOBRE MÍ
-======================================== */
-#sobre-mi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+
+#mensaje2 {
+    display: none;
+    opacity: 0;
+transform: translateY(-10px);
+font-weight: bold;
+color: aquamarine;
+margin-top: 20px;
 }
 
-#sobre-mi img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+
+
+
+.imagen-magia {
+    width: 300px;
+    height: 300px;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.imagen-magia:hover {
+    transform: translateY(-15px) scale(1.05) rotateX(5deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    filter: brightness(1.1) contrast(1.1);
 }
 
-#sobre-mi img:hover {
-    transform: scale(1.05) rotate(2deg);
-}
 
-#sobre-mi p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    background: rgba(255,255,255,0.8);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
+
+
 
 /* ========================================
-   SECCIÓN PEC
-======================================== */
-#pec {
-    text-align: center;
-}
+   ESTILOS PARA MODO OSCURO - VERSIÓN MEJORADA
+   ======================================== */
 
-#pec img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    margin: 2rem auto;
-    display: block;
-}
-
-#pec p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 1.5rem auto;
-    background: rgba(255,255,255,0.9);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-/* ========================================
-   BOTÓN MODO OSCURO
-======================================== */
-.btn-modo-oscuro {
+/* Botón toggle flotante */
+.dark-mode-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    background: #3498db;
     color: white;
     border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.dark-mode-toggle:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52,152,219,0.4);
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: #f39c12;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background: #e67e22;
+}
+
+/* Icono del botón */
+.toggle-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* ========================================
+   MODO OSCURO - SOBRESCRIBIR ESTILOS EXISTENTES
+   ======================================== */
+body.dark-mode {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%) !important;
+}
+
+body.dark-mode nav {
+    background-color: #2c2c2c !important;
+}
+
+body.dark-mode nav a {
+    color: #bdc3c7 !important;
+}
+
+body.dark-mode nav a:hover {
+    color: #f39c12 !important;
+}
+
+body.dark-mode section {
+    background-color: #2c2c2c !important;
+    border-left-color: #f39c12 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ecf0f1 !important;
+    border-bottom-color: #f39c12 !important;
+}
+
+body.dark-mode p {
+    color: #bdc3c7 !important;
+}
+
+body.dark-mode footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%) !important;
+}
+
+body.dark-mode footer p {
+    color: #95a5a6 !important;
+}
+
+/* Mensajes en modo oscuro */
+body.dark-mode #mensaje,
+body.dark-mode #mensaje2 {
+    color: #2ecc71 !important; /* Verde más visible en oscuro */
+}
+
+/* ========================================
+   ANIMACIONES SUAVES PARA TODO
+   ======================================== */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body.dark-mode img {
+    filter: brightness(1.1) !important;
+}
+
+
+
+
+
+
+
+/* === BOTÓN FLOTANTE VOLVER AL INICIO === */
+.btn-volver-inicio {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    font-size: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    font-size: 16px;
+    font-weight: bold;
     transition: all 0.3s ease;
     z-index: 1000;
-}
-
-.btn-modo-oscuro:hover {
-    transform: scale(1.1) rotate(180deg);
-    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
-}
-
-/* ========================================
-   FORMULARIO DE CONTACTO
-======================================== */
-#formulario-de-contacto {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 25px;
-    padding: 3rem;
-    margin: 4rem auto;
-    box-shadow: 0 25px 80px rgba(0,0,0,0.15);
-    max-width: 600px;
-}
-
-.contact-form h2 {
-    color: #667eea;
-    margin-bottom: 2rem;
-    font-size: 2.2rem;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid #e1e5e9;
-    border-radius: 12px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    background: #f8f9fa;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-}
-
-.input-error {
-    border-color: #e74c3c !important;
-    background: #fdf2f2;
-}
-
-.input-success {
-    border-color: #27ae60 !important;
-    background: #f0fff4;
-}
-
-.error-message {
-    color: #e74c3c;
-    font-size: 14px;
-    margin-top: 5px;
-    display: block;
-}
-
-.checkbox-group {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-#btnEnviar {
-    width: 100%;
-    padding: 18px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.btn-volver-inicio:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
 }
 
-#btnEnviar:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+.btn-volver-inicio:active {
+    transform: translateY(-2px) scale(1.02);
 }
 
-.success-message {
-    background: #d4edda;
-    color: #155724;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 20px;
-    border: 2px solid #c3e6cb;
-}
-
-/* ========================================
-   FOOTER
-======================================== */
-footer {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-}
-
-footer p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* ========================================
-   RESPONSIVE
-======================================== */
+/* Responsive */
 @media (max-width: 768px) {
-    #sobre-mi {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    section {
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-    
-    nav a {
-        display: block;
-        margin: 5px 15px;
-        text-align: center;
+    .btn-volver-inicio {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 14px;
     }
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
+
+<div class="form-contacto">
+    <h2>📧 Contacto</h2>
     
-    .btn-modo-oscuro {
-        bottom: 20px;
-        top: auto;
-        right: 20px;
-    }
-}
+    <form id="formContacto">
+        <!-- Nombre -->
+        <div class="form-group">
+            <label>👤 Nombre completo *</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre completo" required>
+            <div class="error-message">¡El nombre es obligatorio!</div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>📧 Email *</label>
+            <input type="email" id="email" placeholder="tu@email.com" required>
+            <div class="error-message">¡Ingresa un email válido!</div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="form-group">
+            <label>📱 Teléfono</label>
+            <input type="tel" id="telefono" placeholder="Tu número de teléfono">
+        </div>
+
+        <!-- Asunto -->
+        <div class="form-group">
+            <label>📋 Asunto *</label>
+            <select id="asunto" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="consulta">Consulta general</option>
+                <option value="soporte">Soporte técnico</option>
+                <option value="cotizacion">Cotización</option>
+                <option value="otro">Otro</option>
+            </select>
+            <div class="error-message">¡Selecciona un asunto!</div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="form-group">
+            <label>💬 Mensaje *</label>
+            <textarea id="mensaje" rows="6" placeholder="Describe tu consulta..." required></textarea>
+            <div class="error-message">¡El mensaje no puede estar vacío!</div>
+        </div>
+
+        <!-- Mensaje de éxito -->
+        <div id="successMessage" class="success-message">
+            ✅ ¡Mensaje enviado correctamente! Te responderemos pronto.
+        </div>
+
+        <!-- Botón enviar -->
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+    </form>
+</div>

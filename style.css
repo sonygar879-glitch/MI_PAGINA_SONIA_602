@@ -257,14 +257,7 @@ h1 { color: var(--text-color); }
 
 
 
-/* Cambia estas clases en el CSS para cambiar posición */
 
-/* Esquina SUPERIOR IZQUIERDA */
-.btn-home-top-left {
-    top: 20px;
-    left: 20px;
-    bottom: auto;
-}
 
 /* Esquina SUPERIOR DERECHA */
 .btn-home-top-right {

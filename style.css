@@ -1,268 +1,7 @@
 
-h1 {
-    color: rgb(255, 238, 0);
-
-}
-
-
-
-
-/*Estilo general de la paguina*/
-body {
-font-family: Arial, Helvetica, sans-serif;
-background-color: #ff4800d9;
-margin: 0;
-line-height: 1.6;
-}
-
-/*Encabezado*/
-header{
-    background-color: #ad0f0f;
-    color: rgba(255, 119, 0, 0.838);
-    text-align: center;
-    padding: 30px 20px;
-}
-
-
-
-
-/*Menu de navegacion*/
-nav{
-    background-color: #d2c215f0;
-    text-align: center;
-    padding: 12px;
-}
-
-
-
-
-
-/*Enlaces del menu*/
-nav a{
-    color: rgb(232, 201, 0);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-
-
-
-/*Efecto al pasar el mouse*/
-nav a:hover {
-    color: #eeff00;
-}
-
-
-
-
-
-/*Secciones*/
-section {
-    background-color: rgb(242, 255, 0);
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 8px;
-}
-
-
-/*imagenes*/
-img{
-border-radius: 10px;
-margin-top: 10px;
-}
-
-
-
-
-/*Pie de pagina*/
-footer {
-    background-color: #e40808bd;
-    color: rgb(250, 158, 0);
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-
-
-/* === VARIABLES CSS PARA MODO OSCURO === */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --card-bg: #f8f9fa;
-    --border-color: #e0e0e0;
-    --button-bg: #667eea;
-    --button-hover: #5a67d8;
-    /* NUEVO: variable para sombras adaptable al tema */
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --button-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    --button-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.4);
-    /* NUEVO: indica al navegador el esquema activo (mejora scrollbars e inputs nativos) */
-    color-scheme: light;
-}
-
-/* NUEVO: respeta la preferencia del sistema operativo automáticamente */
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --bg-color: #1a1a1a;
-        --text-color: #ffffff;
-        --card-bg: #2d2d2d;
-        --border-color: #444444;
-        --button-bg: #4a5568;
-        --button-hover: #2d3748;
-        --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        --button-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        --button-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.6);
-        color-scheme: dark;
-    }
-}
-
-[data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #ffffff;
-    --card-bg: #2d2d2d;
-    --border-color: #444444;
-    --button-bg: #4a5568;
-    --button-hover: #2d3748;
-    /* NUEVO: sombras más intensas en modo oscuro */
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    --button-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    --button-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.6);
-    color-scheme: dark;
-}
-
-/* === ESTILOS BASE DE LA PÁGINA === */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* CORREGIDO: propiedades específicas en vez de "all" (mejor rendimiento) */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 15px;
-    /* CORREGIDO: usa la variable --shadow adaptable al tema */
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-    /* CORREGIDO: transición específica para la sombra */
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-h1 { color: var(--text-color); }
-
-/* === BOTÓN MODO OSCURO === */
-.btn-modo-oscuro {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--button-bg);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    font-size: 18px;
-    /* CORREGIDO: usa variable --button-shadow adaptable al tema */
-    box-shadow: var(--button-shadow);
-    /* CORREGIDO: propiedades específicas en vez de "all" */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-modo-oscuro:hover {
-    transform: scale(1.1);
-    background: var(--button-hover);
-    box-shadow: var(--button-shadow-hover);
-}
-
-/* NUEVO: indicador de foco accesible para usuarios de teclado */
-.btn-modo-oscuro:focus-visible {
-    outline: 2px solid var(--button-bg);
-    outline-offset: 3px;
-}
-
-.btn-modo-oscuro.active {
-    background: #f39c12;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .btn-modo-oscuro { width: 55px; height: 55px; font-size: 16px; }
-}
-
-
-
-
-
-
-/* ESTILOS DEL BOTÓN */
-.btn-home {
-    /* Posición fija en pantalla */
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    z-index: 1000;
-    
-    /* Colores y diseño */
-    background: linear-gradient(45deg, #4CAF50, #45a049);
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 50px;
-    
-    /* Texto */
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    
-    /* Flexbox para centrar icono */
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    
-    /* Efectos */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.btn-home:hover {
-    background: linear-gradient(45deg, #45a049, #4CAF50);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-}
-
-.btn-home:active {
-    transform: translateY(-1px) scale(1.02);
-}
-
-/* Icono */
-.icon {
-    font-size: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-/* ESTILOS GENERALES */
+/* ========================================
+   RESET Y GENERALES
+======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -271,47 +10,282 @@ h1 { color: var(--text-color); }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
 }
 
-.container {
-    max-width: 500px;
+/* ========================================
+   HEADER
+======================================== */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10"><defs><pattern id="grain" width="100" height="10" patternUnits="userSpaceOnUse"><circle cx="25" cy="5" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="5" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="10" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   NAVEGACIÓN
+======================================== */
+nav {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+nav a {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   SECCIONES GENERALES
+======================================== */
+section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+section h3 {
+    font-size: 1.8rem;
+    color: #764ba2;
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+}
+
+/* ========================================
+   BOTONES TOGGLE MENSAJE
+======================================== */
+.mensaje {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.mensaje.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.mensaje::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
 }
 
-/* FORMULARIO */
-.contact-form {
-    background: white;
-    padding: 40px;
+.mensaje.visible::before {
+    left: 100%;
+}
+
+button[onclick*="mostrarMensaje"], 
+button[onclick*="MostrarMensaje"] {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button[onclick*="mostrarMensaje"]:hover,
+button[onclick*="MostrarMensaje"]:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+}
+
+/* ========================================
+   SECCIÓN SOBRE MÍ
+======================================== */
+#sobre-mi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+#sobre-mi img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+#sobre-mi img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+#sobre-mi p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   SECCIÓN PEC
+======================================== */
+#pec {
+    text-align: center;
+}
+
+#pec img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    margin: 2rem auto;
+    display: block;
+}
+
+#pec p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   BOTÓN MODO OSCURO
+======================================== */
+.btn-modo-oscuro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-modo-oscuro:hover {
+    transform: scale(1.1) rotate(180deg);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+}
+
+/* ========================================
+   FORMULARIO DE CONTACTO
+======================================== */
+#formulario-de-contacto {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 3rem;
+    margin: 4rem auto;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+    max-width: 600px;
 }
 
 .contact-form h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 28px;
+    color: #667eea;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
 }
 
-/* CAMPOS DEL FORMULARIO */
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
-label {
+.form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
     color: #555;
 }
 
-input, select, textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 15px;
     border: 2px solid #e1e5e9;
@@ -321,14 +295,14 @@ input, select, textarea {
     background: #f8f9fa;
 }
 
-input:focus, select:focus, textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: #667eea;
-    background: white;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* ESTADOS DE VALIDACIÓN */
 .input-error {
     border-color: #e74c3c !important;
     background: #fdf2f2;
@@ -339,30 +313,20 @@ input:focus, select:focus, textarea:focus {
     background: #f0fff4;
 }
 
-/* MENSAJES DE ERROR */
 .error-message {
     color: #e74c3c;
     font-size: 14px;
     margin-top: 5px;
     display: block;
-    min-height: 18px;
 }
 
-/* CHECKBOX */
 .checkbox-group {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
 
-.checkbox-group input[type="checkbox"] {
-    width: auto;
-    margin: 0;
-    margin-top: 2px;
-}
-
-/* BOTÓN ENVIAR */
-button[type="submit"] {
+#btnEnviar {
     width: 100%;
     padding: 18px;
     background: linear-gradient(45deg, #667eea, #764ba2);
@@ -373,21 +337,13 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-button[type="submit"]:hover:not(:disabled) {
+#btnEnviar:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
-button[type="submit"]:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-/* MENSAJE DE ÉXITO */
 .success-message {
     background: #d4edda;
     color: #155724;
@@ -399,21 +355,52 @@ button[type="submit"]:disabled {
     border: 2px solid #c3e6cb;
 }
 
-/* RESPONSIVE */
-@media (max-width: 480px) {
-    .contact-form {
-        padding: 25px;
-        margin: 10px;
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 768px) {
+    #sobre-mi {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
     }
     
-    .contact-form h2 {
-        font-size: 24px;
+    section {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 15px;
+        text-align: center;
     }
 }
 
-
-
-
-
-
-
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-modo-oscuro {
+        bottom: 20px;
+        top: auto;
+        right: 20px;
+    }
+}

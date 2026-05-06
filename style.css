@@ -14,7 +14,7 @@ body {
 
 /*Encabezado*/
 header {
-    background: linear-gradient(135deg, #4fa97c 0%, #4fa97c 0%adiente académico */
+    background: linear-gradient(135deg, #4fa97c 0%, #2c5037 100%); /* Gradiente académico */
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -41,7 +41,7 @@ nav a {
 
 /*Efecto al pasar el mouse*/
 nav a:hover {
-    color: #34db42; /* Azul académico vibrante */
+    color: #34db69; /* Azul académico vibrante */
     transform: translateY(-2px);
 }
 
@@ -54,7 +54,7 @@ section {
     max-width: 1000px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra suave */
-    border-left: 5px solid #34db63; /* Línea lateral distintiva */
+    border-left: 5px solid #34db4a; /* Línea lateral distintiva */
 }
 
 /*imagenes*/
@@ -78,7 +78,7 @@ footer {
 
 /* Mejoras adicionales para ambiente académico */
 h2, h3 {
-    color: #2c3e50;
+    color: #2c5035;
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
 }
@@ -111,7 +111,7 @@ button:hover {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: aquamarine;
+    background-color: rgb(255, 170, 127);
     color: white;
     border: none;
     border-radius: 8px;

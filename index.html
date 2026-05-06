@@ -1,124 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Primera Pagina Web</title>
-    <link rel="stylesheet" href="style.css" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mi Primera Pagina Web</title>
+<link rel="stylesheet" href="style.css" />
 </head>
-
-<body>
-    <header>
-        <h1>Mi Pagina Personal</h1>
-    </header>
+<body> 
+<header>
+    <h1>Mi Pagina Personal</h1>
+ </header>
     <nav>
         <a href="#sobre-mi">sobre mi</a>
         <a href="#pec">Proyecto PEC</a>
+        <a href="#botones-interactivos">centro interactivo</a>
+
     </nav>
-
-
     <section id="sobre-mi">
-        <!-- Botón modo oscuro -->
-<button class="btn-modo-oscuro" id="btnModoOscuro" title="Cambiar tema">
-        <p id="mensaje2" style="display:none;"></p>
-        <button onclick="mostrarMensaje2()">Mostrar mensaje</button>
+
+        <!-- BOTÓN MODO OSCURO FLOTANTE -->
+<button class="dark-mode-toggle" id="darkModeToggle">
+    <span class="toggle-icon">☀️</span>
+    Modo Claro
+</button>
         <h2>sobre mi</h2>
+       
         <img src="img/tarjeta_digital_sonia_602.png" alt="foto perfonal" width="400" height="300">
         <p>Informacion personal.</p>
-        <p>Hola, mi nombre es Sonia Garcia Martinez</p>
+        <p>Hola, mi nombre es Rafael Uziel Cruz Garcia</p>
         <p>Soy estudiante de el emsad 35</p>
+    </section>
+
+
+    </section>
+
+
+    <section id="botones-interactivos">
+ 
+<p id="mensaje" style="display:none;"></p>
+<button onclick="toggleMensaje()">Mostrar mensaje</button>
+
+ <p id="mensaje2" style="display:none;"></p>
+<button onclick="toggleMensaje2()">Mostrar mensaje</button><br><br>
+
     </section>
 
 
 
     <section id="pec">
-     <p id="mensaje" style="display:none;"></p>
-        <button onclick="MostrarMensaje()">Mostrar mensaje</button>
         <h2>Proyecto Escolar Comunitario</h2>
+        
+
         <h3>Proyecto Huellas</h3>
-        <p>Este proyecto trata sobre la sobrepoblacion de perros</p>
-        <p>Esto hablara sobre los problemas que ocacionan los perros callejeros</p>
-        <img src="img/actividad 4_sonia_602.png" width="400" height="300">
+        <p>Este proyecto trata sobre la  sobre poblacion de perros callegeros</p>
+        <p>La problematica que atiende es el problema de los perros de la calle y como podemos evitar esto</p>
+        <img src="img/actividad 4_sonia_602.png" alt="baner" width="400" height="300">
 
     </section>
 
 
-    <section id="formulario-de-contacto">
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto</title>
-    <div class="container">
-        <form id="contactForm" class="contact-form">
-            <h2>📧 Contáctanos</h2>
-            
-            <!-- Nombre Completo -->
-            <div class="form-group">
-                <label for="nombre">Nombre Completo *</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <span class="error-message" id="error-nombre"></span>
-            </div>
+<section>
+    <div class="form-contacto">
+    <h2>📧 Contacto</h2>
+    
+    <form id="formContacto">
+        <!-- Nombre -->
+        <div class="form-group">
+            <label>👤 Nombre completo *</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre completo" required>
+            <div class="error-message">¡El nombre es obligatorio!</div>
+        </div>
 
-            <!-- Email -->
-            <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error-message" id="error-email"></span>
-            </div>
+        <!-- Email -->
+        <div class="form-group">
+            <label>📧 Email *</label>
+            <input type="email" id="email" placeholder="tu@email.com" required>
+            <div class="error-message">¡Ingresa un email válido!</div>
+        </div>
 
-            <!-- Teléfono -->
-            <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono">
-                <span class="error-message" id="error-telefono"></span>
-            </div>
+<!-- Teléfono - SOLO NÚMEROS -->
+<div class="form-group">
+    <label>📱 Teléfono <span style="color:#e74c3c;">*</span></label>
+    <input type="tel" id="telefono" placeholder="Ej: 1234567890" maxlength="15" required>
+    <div class="error-message">¡Solo números! Ej: 1234567890</div>
+</div>
 
-            <!-- Asunto -->
-            <div class="form-group">
-                <label for="asunto">Asunto *</label>
-                <select id="asunto" name="asunto" required>
-                    <option value="">Selecciona un asunto</option>
-                    <option value="consulta">Consulta General</option>
-                    <option value="soporte">Soporte Técnico</option>
-                    <option value="ventas">Información de Productos</option>
-                    <option value="otro">Otro</option>
-                </select>
-                <span class="error-message" id="error-asunto"></span>
-            </div>
+        <!-- Asunto -->
+        <div class="form-group">
+            <label>📋 Asunto *</label>
+            <select id="asunto" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="consulta">Consulta general</option>
+                <option value="soporte">Soporte técnico</option>
+                <option value="cotizacion">Cotización</option>
+                <option value="otro">Otro</option>
+            </select>
+            <div class="error-message">¡Selecciona un asunto!</div>
+        </div>
 
-            <!-- Mensaje -->
-            <div class="form-group">
-                <label for="mensaje">Mensaje *</label>
-                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-                <span class="error-message" id="error-mensaje"></span>
-            </div>
+        <!-- Mensaje -->
+        <div class="form-group">
+            <label>💬 Mensaje *</label>
+            <textarea id="mensaje" rows="6" placeholder="Describe tu consulta..." required></textarea>
+            <div class="error-message">¡El mensaje no puede estar vacío!</div>
+        </div>
 
-            <!-- Checkbox Aceptar términos -->
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="terminos" name="terminos" required>
-                <label for="terminos">Acepto los <a href="#">términos y condiciones</a> *</label>
-                <span class="error-message" id="error-terminos"></span>
-            </div>
+        <!-- Mensaje de éxito -->
+        <div id="successMessage" class="success-message">
+            ✅ ¡Mensaje enviado correctamente! Te responderemos pronto.
+        </div>
 
-            <!-- Botón enviar -->
-            <button type="submit" id="btnEnviar">
-                <span class="btn-text">Enviar Mensaje</span>
-                <span class="btn-loading" style="display: none;">Enviando...</span>
-            </button>
-
-            <!-- Mensaje de éxito -->
-            <div id="mensajeExito" class="success-message" style="display: none;">
-                ✅ ¡Mensaje enviado correctamente!
-            </div>
-        </form>
-    </div>
+        <!-- Botón enviar -->
+        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+    </form>
+</div>
     </section>
+            <!-- Botón flotante -->
+<a href="#" class="btn-volver-inicio" title="Volver al inicio">
+    ↑
+</a>
 
-  
     <footer>
-        <p>2026-Sonia Garcia Martinez</p>
+       <p>2026-sonia</p>
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -47,7 +47,7 @@ function toggleMensaje2() {
     // ¿Está OCULTO? → MOSTRAR
     else {
         // Mostrar mensaje
-        mensaje.innerHTML = "hola soy sonia de rio hilos";
+        mensaje.innerHTML = "hola soy sonia del rio hilo";
         mensaje.style.display = "block";
         
         setTimeout(() => {

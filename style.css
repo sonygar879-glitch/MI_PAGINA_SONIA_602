@@ -259,22 +259,6 @@ h1 { color: var(--text-color); }
 
 
 
-/* Esquina SUPERIOR DERECHA */
-.btn-home-top-right {
-    top: 20px;
-    right: 20px;
-    left: auto;
-    bottom: auto;
-}
-
-/* CENTRO de la pantalla */
-.btn-home-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: auto;
-}
-
 
 
 

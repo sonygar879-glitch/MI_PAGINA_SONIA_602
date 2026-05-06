@@ -43,6 +43,77 @@
 
     </section>
 
+
+    <section id="formulario-de-contacto">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <div class="container">
+        <form id="contactForm" class="contact-form">
+            <h2>📧 Contáctanos</h2>
+            
+            <!-- Nombre Completo -->
+            <div class="form-group">
+                <label for="nombre">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span class="error-message" id="error-nombre"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="error-email"></span>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+                <span class="error-message" id="error-telefono"></span>
+            </div>
+
+            <!-- Asunto -->
+            <div class="form-group">
+                <label for="asunto">Asunto *</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona un asunto</option>
+                    <option value="consulta">Consulta General</option>
+                    <option value="soporte">Soporte Técnico</option>
+                    <option value="ventas">Información de Productos</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <span class="error-message" id="error-asunto"></span>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                <span class="error-message" id="error-mensaje"></span>
+            </div>
+
+            <!-- Checkbox Aceptar términos -->
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los <a href="#">términos y condiciones</a> *</label>
+                <span class="error-message" id="error-terminos"></span>
+            </div>
+
+            <!-- Botón enviar -->
+            <button type="submit" id="btnEnviar">
+                <span class="btn-text">Enviar Mensaje</span>
+                <span class="btn-loading" style="display: none;">Enviando...</span>
+            </button>
+
+            <!-- Mensaje de éxito -->
+            <div id="mensajeExito" class="success-message" style="display: none;">
+                ✅ ¡Mensaje enviado correctamente!
+            </div>
+        </form>
+    </div>
+    </section>
+
   <!-- BOTÓN VOLVER AL INICIO -->
     <a href="/" class="btn-home" title="Volver al inicio">
         <span class="icon">🏠</span>

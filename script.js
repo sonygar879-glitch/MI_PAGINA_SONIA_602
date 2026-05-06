@@ -70,3 +70,36 @@ function actualizarBoton(tema) {
         btnModoOscuro.title = 'Modo oscuro';
     }
 }
+
+
+
+
+
+
+
+
+// FUNCIÓN PARA EL BOTÓN HOME
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const btnHome = document.querySelector('.btn-home');
+    
+    // Efecto click mejorado
+    btnHome.addEventListener('click', function(e) {
+        // Opción 1: Redirección directa
+        window.location.href = '/';
+        
+        // Opción 2: Con confirmación (descomenta si quieres)
+        // if (confirm('¿Volver al inicio?')) {
+        //     window.location.href = '/';
+        // }
+    });
+    
+    // Efecto de scroll suave (opcional)
+    btnHome.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.05)';
+    });
+    
+    btnHome.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});

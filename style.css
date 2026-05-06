@@ -202,3 +202,82 @@ h1 { color: var(--text-color); }
 @media (max-width: 768px) {
     .btn-modo-oscuro { width: 55px; height: 55px; font-size: 16px; }
 }
+
+
+
+
+
+
+/* ESTILOS DEL BOTÓN */
+.btn-home {
+    /* Posición fija en pantalla */
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+    
+    /* Colores y diseño */
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    
+    /* Texto */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    
+    /* Flexbox para centrar icono */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* Efectos */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-home:hover {
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.btn-home:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Icono */
+.icon {
+    font-size: 20px;
+}
+
+
+
+
+
+/* Cambia estas clases en el CSS para cambiar posición */
+
+/* Esquina SUPERIOR IZQUIERDA */
+.btn-home-top-left {
+    top: 20px;
+    left: 20px;
+    bottom: auto;
+}
+
+/* Esquina SUPERIOR DERECHA */
+.btn-home-top-right {
+    top: 20px;
+    right: 20px;
+    left: auto;
+    bottom: auto;
+}
+
+/* CENTRO de la pantalla */
+.btn-home-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+}

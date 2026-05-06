@@ -1,15 +1,66 @@
 
-    function MostrarMensaje(){
-    let mensaje= document.getElementById("mensaje");
-    mensaje.innerHTML="CUIDA Y PROTEGE A LOS ANIMALES";
-    mensaje.style.display="block";
+ // 🎯 FUNCIÓN TOGGLE MEJORADA
+document.addEventListener('DOMContentLoaded', function() {
+    const mensaje = document.getElementById('mensaje');
+    const btnToggle = document.getElementById('btnToggle');
+    const btnIcon = btnToggle.querySelector('.btn-icon');
+    const btnText = btnToggle.querySelector('.btn-text');
+    
+    let esVisible = false;
 
-    setTimeout(()=>{
-        mensaje.style.opacity="1";
-        mensaje.style.transform= "translateY(0)";
-    }, 50);
-}
+    function toggleMensaje() {
+        esVisible = !esVisible;
+        
+        if (esVisible) {
+            // 👁️ MOSTRAR MENSAJE
+            mostrarMensaje();
+        } else {
+            // 🙈 OCULTAR MENSAJE
+            ocultarMensaje();
+        }
+    }
 
+    function mostrarMensaje() {
+        mensaje.innerHTML = "🐾 CUIDA Y PROTEGE A LOS ANIMALES 🐾";
+        mensaje.classList.remove('oculto');
+        mensaje.classList.add('visible');
+        
+        // Cambiar estado del botón
+        btnToggle.classList.remove('ocultar');
+        btnToggle.classList.add('mostrar');
+        btnText.textContent = 'Ocultar Mensaje';
+        btnIcon.textContent = '🙈';
+    }
+
+    function ocultarMensaje() {
+        mensaje.classList.remove('visible');
+        mensaje.classList.add('oculto');
+        
+        // Cambiar estado del botón
+        btnToggle.classList.remove('mostrar');
+        btnToggle.classList.add('ocultar');
+        btnText.textContent = 'Mostrar Mensaje';
+        btnIcon.textContent = '👁️';
+    }
+
+    // EVENTO CLICK DEL BOTÓN
+    btnToggle.addEventListener('click', toggleMensaje);
+
+    // TECLA ENTER/SPACE para accesibilidad
+    btnToggle.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMensaje();
+        }
+    });
+
+    // CLICK FUERA DEL MENSAJE PARA OCULTAR (OPCIONAL)
+    document.addEventListener('click', function(e) {
+        if (!mensaje.contains(e.target) && !btnToggle.contains(e.target) && esVisible) {
+            ocultarMensaje();
+        }
+    });
+});
 
 
 

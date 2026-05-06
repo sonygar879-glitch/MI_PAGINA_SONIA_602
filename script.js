@@ -47,7 +47,7 @@ function toggleMensaje2() {
     // ¿Está OCULTO? → MOSTRAR
     else {
         // Mostrar mensaje
-        mensaje.innerHTML = "hola mi nombre es Rafael Uziel Cruz Garcia y tengo 18 años";
+        mensaje.innerHTML = "hola soy sonia de rio hilos";
         mensaje.style.display = "block";
         
         setTimeout(() => {
